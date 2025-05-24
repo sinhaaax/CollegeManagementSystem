@@ -4,7 +4,7 @@ function loginUser(event) {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  if (username === "102111001154" && password === "1154") {
+  if (username === "project" && password === "100") {
     window.location.href = "dashboard.html";
   } else {
     alert("Invalid credentials! Try again.");

@@ -68,14 +68,14 @@
 .dashboard-body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #7b2ff7, #00c6ff);
+  background-color: #926bd0;
   min-height: 100vh;
-  color: #fff;
+  color: black;
 }
 
 /* Header Styles */
 .header {
-  background: rgba(0, 0, 0, 0.2);
+  background: #33186B;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -89,11 +89,19 @@
   align-items: center;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
+.logo-container {
+  background: linear-gradient(to right, #ffffff, #ffffffcc); /* white to semi-transparent white */
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
 }
+
+.ju-logo {
+  height: 60px;
+  object-fit: contain;
+}
+
+
 
 .nav-links {
   list-style: none;
@@ -165,4 +173,208 @@
 .dash-btn:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.25);
+}
+
+/* Notice Board Styling */
+.notice-board {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: white;
+}
+
+.notice-board h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.notice-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.notice-list li {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.notice-list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Results Page Styling */
+.results-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  color: white;
+  text-align: center;
+}
+
+.results-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-size: 1rem;
+}
+
+.results-table thead {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.results-table th,
+.results-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.results-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Community Page Styles */
+.community-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+}
+
+.community-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.post-form textarea {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  font-size: 1rem;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+.post-form textarea::placeholder {
+  color: #eee;
+}
+
+.post-form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #ffffff33;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.post-form button:hover {
+  background-color: #ffffff55;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Question Paper Page Styling */
+.questions-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+}
+
+.questions-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.papers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.paper-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.paper-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.paper-card a {
+  text-decoration: none;
+  color: white;
+  background-color: #6c5ce7;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.paper-card a:hover {
+  background-color: #a29bfe;
 }
