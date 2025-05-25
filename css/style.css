@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to left, #926bd0, #4e66d4);
+  background: linear-gradient(to left, #d8e5d2, #d1e4c9, #c7e1bb);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@
   border: none;
   border-radius: 8px;
   outline: none;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.625);
   color: rgb(10, 0, 0);
   font-size: 1rem;
 }
@@ -46,7 +46,7 @@
 .login-container button {
   width: 100%;
   padding: 0.9rem;
-  background: #ffffff22;
+  background: rgba(255, 255, 255, 0.625);
   color: rgb(0, 0, 0);
   font-weight: bold;
   border: none;
@@ -68,15 +68,15 @@
 .dashboard-body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #926bd0;
+  background: linear-gradient(to left, #d8e5d2, #d1e4c9, #c7e1bb);
   min-height: 100vh;
   color: black;
 }
 
 /* Header Styles */
 .header {
-  background: #33186B;
-  padding: 1rem 2rem;
+  background: #064420;
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -91,9 +91,9 @@
 
 .logo-container {
   background: linear-gradient(to right, #ffffff, #ffffffcc); /* white to semi-transparent white */
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
   border-radius: 12px;
-  display: inline-block;
+  display: flex;
 }
 
 .ju-logo {
@@ -110,16 +110,17 @@
 }
 
 .nav-links a {
+  display: block;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   padding: 0.4rem 0.8rem;
-  transition: 0.3s ease;
+  transition: transform 0.3s, background 0.3s;
   border-radius: 6px;
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
 }
 
 /* Dashboard Main Section */
@@ -146,8 +147,8 @@
 }
 
 .profile-card p {
-  font-size: 1rem;
-  color: #e0e0e0;
+  font-size: 1.5rem;
+  color: #040000;
 }
 
 /* Dashboard Links */
@@ -161,7 +162,7 @@
   display: block;
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.15);
-  color: white;
+  color: rgb(9, 0, 0);
   text-decoration: none;
   font-weight: bold;
   border-radius: 10px;
