@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to left, #d8e5d2, #d1e4c9, #c7e1bb);
+  background: linear-gradient(to left, #926bd0, #4e66d4);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@
   border: none;
   border-radius: 8px;
   outline: none;
-  background: rgba(255, 255, 255, 0.625);
+  background: rgba(255, 255, 255, 0.2);
   color: rgb(10, 0, 0);
   font-size: 1rem;
 }
@@ -46,7 +46,7 @@
 .login-container button {
   width: 100%;
   padding: 0.9rem;
-  background: rgba(255, 255, 255, 0.625);
+  background: #ffffff22;
   color: rgb(0, 0, 0);
   font-weight: bold;
   border: none;
@@ -68,60 +68,113 @@
 .dashboard-body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to left, #d8e5d2, #d1e4c9, #c7e1bb);
+  background-color: #926bd0;
   min-height: 100vh;
   color: black;
 }
 
-/* Header Styles */
-.header {
-  background: #064420;
-  padding: 0.5rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(8px);
-}
-
-.header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-container {
-  background: linear-gradient(to right, #ffffff, #ffffffcc); /* white to semi-transparent white */
-  padding: 0rem 1rem;
-  border-radius: 12px;
-  display: flex;
-}
-
-.ju-logo {
-  height: 60px;
-  object-fit: contain;
-}
-
-
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.2rem;
-}
-
-.nav-links a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
+/* Navbar brand (if you use text branding) */
+.navbar-brand {
   font-weight: 500;
-  padding: 0.4rem 0.8rem;
-  transition: transform 0.3s, background 0.3s;
-  border-radius: 6px;
+  color: #009970;
+  font-size: 24px;
+  transition: 0.3s color;
 }
 
-.nav-links a:hover {
-  transform: translateY(-5px);
+/* Sign Out Button */
+.signOut-button {
+  background-color: #c7e1bb;
+  color: #000;
+  font-size: 14px;
+  padding: 6px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+.signOut-button:hover {
+  background-color: #00b383;
+  color: white;
+}
+
+
+/* Toggler Button */
+.navbar-toggler {
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #009970;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+  visibility: visible;
+}
+
+/* Logo Container Styling */
+.logo-container {
+  background: linear-gradient(to right, #ffffff, #ffffffcc);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.offcanvas .logo-container {
+  display: inline-block;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+
+/* JU Logo Image */
+.ju-logo {
+  height: 50px;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+
+.offcanvas .ju-logo {
+  background-color: transparent !important;
+  padding: 0;
+  box-shadow: none;
+}
+
 
 /* Dashboard Main Section */
 .dashboard {
@@ -131,25 +184,98 @@
   text-align: center;
 }
 
-/* Profile Card */
-.profile-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  backdrop-filter: blur(8px);
+
+
+
+/* Dashboard container fills viewport minus navbar height */
+/* Light background for the whole dashboard */
+.dashboard-container {
+  min-height: calc(100vh - 56px); /* adjust if navbar height is different */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #f0f2f5; /* soft light gray */
 }
 
-.profile-card h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+main {
+  padding-top: 70px; /* Push content below fixed navbar */
+  background: #f0f2f5;
 }
 
-.profile-card p {
-  font-size: 1.5rem;
-  color: #040000;
+
+ /* Fix body layout */
+    body {
+      background: #f0f2f5;
+      margin: 0;
+      padding-top: 70px; /* Push content below navbar */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Profile card styling */
+    .profile-card {
+      background: #1e1e2f;
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      max-width: 480px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .profile-card h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+
+    .profile-card p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      color: #e0e0e0;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    footer {
+      padding: 1rem;
+    }
+/* Dashboard icons section */
+.dashboard-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
 }
+
+/* Dashboard icons section */
+.dashboard-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Dashboard icon/footer */
+.dashboard-footer {
+  background: transparent; /* or a light color if needed */
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
 
 /* Dashboard Links */
 .dashboard-links {
@@ -162,7 +288,7 @@
   display: block;
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.15);
-  color: rgb(9, 0, 0);
+  color: white;
   text-decoration: none;
   font-weight: bold;
   border-radius: 10px;
@@ -175,6 +301,14 @@
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.25);
 }
+
+.display-4 {
+  font-size: 2.8rem;
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+  text-align: center;
+}
+
+
 
 /* Notice Board Styling */
 .notice-board {
