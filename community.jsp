@@ -45,7 +45,7 @@
                                     <p class="mb-1"><strong>Sraddha Kapoor</strong></p>
                                     <p>Does anyone have the PDF of last year's DBMS paper?</p>
                                     <div class="d-flex justify-content-between small">
-                                        <span class="text-muted">🕒 Posted 1 day ago</span>
+                                        <span class="text-white">🕒 Posted 1 day ago</span>
                                         <div class="text-white">
                                             <button class="btn btn-sm btn-outline-danger me-2 glow-icon">❤️
                                                 Like</button>
@@ -65,7 +65,7 @@
                                     <p class="mb-1"><strong>Tamanna Bhatia</strong></p>
                                     <p>Cultural fest rehearsals at 5PM! Don’t miss it.</p>
                                     <div class="d-flex justify-content-between small">
-                                        <span class="text-muted">🕒 Posted 1 day ago</span>
+                                        <span class="text-white">🕒 Posted 1 day ago</span>
                                         <div class="text-white">
                                             <button class="btn btn-sm btn-outline-danger me-2 glow-icon">❤️
                                                 Like</button>
@@ -85,7 +85,7 @@
                                     <p class="mb-1"><strong>Niha Su Xen</strong></p>
                                     <p>Any updates on result rechecking forms?</p>
                                     <div class="d-flex justify-content-between small">
-                                        <span class="text-muted">🕒 Posted 1 day ago</span>
+                                        <span class="text-white">🕒 Posted 1 day ago</span>
                                         <div class="text-white">
                                             <button class="btn btn-sm btn-outline-danger me-2 glow-icon">❤️
                                                 Like</button>
