@@ -1,58 +1,110 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Community | JU Portal</title>
+    <!DOCTYPE html>
+    <html lang="en">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Community | JU Portal</title>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/community.css" />
+    </head>
 
-<body class="d-flex flex-column min-vh-100">
+    <body>
 
-  <!-- Include Header -->
-  <%@ include file="header.html" %>
+        <!-- Include Header -->
+        <%@ include file="header.html" %>
 
-  <!-- Community Section -->
-  <main class="flex-grow-1 container py-5 mt-4" style="background: #f0f2f5;">
-    <h2 class="text-center mb-4">🗣️ JU Student Community</h2>
+            <!-- Main Content Wrapper -->
+            <div class="page-wrapper">
+                <div class="glass-card">
 
-    <!-- Post Form -->
-    <form class="post-form mb-5">
-      <div class="mb-3">
-        <textarea class="form-control" rows="4" placeholder="Share your thoughts..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-success">Post</button>
-    </form>
+                    <h2 class="text-center mb-4">🗣️ JU Student Community</h2>
 
-    <!-- Posts Section -->
-    <div class="posts">
-      <div class="card mb-3 shadow-sm">
-        <div class="card-body">
-          <p><strong>Ananya Sinha:</strong> Does anyone have the PDF of last year's DBMS paper?</p>
-        </div>
-      </div>
+                    <!-- Post Form -->
+                    <form class="post-form mb-4">
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Share your thoughts..."
+                                required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success rounded-pill">Post</button>
+                        </div>
+                    </form>
 
-      <div class="card mb-3 shadow-sm">
-        <div class="card-body">
-          <p><strong>Ritvik Das:</strong> Cultural fest rehearsals at 5PM! Don’t miss it.</p>
-        </div>
-      </div>
+                    <!-- Posts -->
+                    <div class="posts">
 
-      <div class="card mb-3 shadow-sm">
-        <div class="card-body">
-          <p><strong>Neha Roy:</strong> Any updates on result rechecking forms?</p>
-        </div>
-      </div>
-    </div>
-  </main>
+                        <div class="card post-card mb-3 shadow">
+                            <div class="card-body d-flex">
+                                <img src="images/pf1.jpg" class="rounded-circle me-3" alt="Sraddha">
+                                <div>
+                                    <p class="mb-1"><strong>Sraddha Kapoor</strong></p>
+                                    <p>Does anyone have the PDF of last year's DBMS paper?</p>
+                                    <div class="d-flex justify-content-between small">
+                                        <span class="text-muted">🕒 Posted 1 day ago</span>
+                                        <div class="text-white">
+                                            <button class="btn btn-sm btn-outline-danger me-2 glow-icon">❤️
+                                                Like</button>
+                                            <button class="btn btn-sm btn-outline-secondary glow-icon">💬
+                                                Comment</button>
+                                        </div>
+                                    </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card post-card mb-3 shadow">
+                            <div class="card-body d-flex">
+                                <img src="images/pf2.jpg" class="rounded-circle me-3" alt="Tamanna">
+                                <div>
+                                    <p class="mb-1"><strong>Tamanna Bhatia</strong></p>
+                                    <p>Cultural fest rehearsals at 5PM! Don’t miss it.</p>
+                                    <div class="d-flex justify-content-between small">
+                                        <span class="text-muted">🕒 Posted 1 day ago</span>
+                                        <div class="text-white">
+                                            <button class="btn btn-sm btn-outline-danger me-2 glow-icon">❤️
+                                                Like</button>
+                                            <button class="btn btn-sm btn-outline-secondary glow-icon">💬
+                                                Comment</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card post-card mb-3 shadow">
+                            <div class="card-body d-flex">
+                                <img src="images/pf3.jpg" class="rounded-circle me-3" alt="Niha">
+                                <div>
+                                    <p class="mb-1"><strong>Niha Su Xen</strong></p>
+                                    <p>Any updates on result rechecking forms?</p>
+                                    <div class="d-flex justify-content-between small">
+                                        <span class="text-muted">🕒 Posted 1 day ago</span>
+                                        <div class="text-white">
+                                            <button class="btn btn-sm btn-outline-danger me-2 glow-icon">❤️
+                                                Like</button>
+                                            <button class="btn btn-sm btn-outline-secondary glow-icon">💬
+                                                Comment</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>

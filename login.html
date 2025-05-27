@@ -1,41 +1,60 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | JU College Portal</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Login | JU PORTAL</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/login.css" />
 </head>
-<body class="login-body">
-  <div class="login-container">
-    <h2>Login to JU Portal</h2>
-    <form action="content.jsp" id="loginForm">
-      <input type="text" id="username" name="username" placeholder="Current 12 digit Roll Number"  required />
-      <input type="password" id="password" name="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
-    <p class="note">Only for Jadavpur University students.</p>
+<body>
+
+  <div class="d-flex justify-content-center align-items-center vh-100 bg-cover" style="background-image: url('images/aurobindo.jpg')">
+    <div class="wrapper text-white">
+      <form action="content.jsp" id="loginForm">
+        <h1 class="text-center mb-4">Login</h1>
+
+        <div class="mb-3 position-relative input-box">
+          <input type="text" id="username" name="username" class="form-control" placeholder="Current 12 digit roll number" id="username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="mb-3 position-relative input-box">
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password" id="password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+
+        <button type="submit" class="btn btn-light w-100">Login</button>
+
+        <div class="text-center mt-4 register-link">
+          <p class="note">Only for Jadavpur University students.</p>
+        </div>
+      </form>
+    </div>
   </div>
 
-  <script >
-  document.getElementById('loginForm').addEventListener('submit', function (e)  {
-	  
-	  const username = document.getElementById("username").value;
-	  const password = document.getElementById("password").value;
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-	  if (username === "user" && password === "100") {
-	    
-	  } 
-	  else if (username === "admin" && password === "admin") {
-		    
-	  }
-	  else {
-		 e.preventDefault(); // stop form submission
-	    alert("Invalid credentials! Try again.");
-	  }
-	});
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
+      if ((username === "user" && password === "100") ||
+          (username === "admin" && password === "admin")) {
+        // Allow form submission
+      } else {
+        e.preventDefault(); // Stop form submission
+        alert("Invalid credentials! Try again.");
+      }
+    });
   </script>
 </body>
 </html>
