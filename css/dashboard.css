@@ -1,0 +1,178 @@
+/* Base Reset and Layout */
+body {
+  margin: 0;
+  padding-top: 70px; /* adjust for fixed navbar */
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #f0f2f5;
+}
+
+main {
+  flex: 1;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: #f0f2f5;
+}
+
+/* Profile Card - Circular + Glowing */
+.profile-card {
+  position: relative;
+  background: #1e1e2f;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: grab;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+
+.profile-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.profile-card p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* Optional Hover Floating Icon */
+.profile-card::after {
+  content: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #aaa;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.profile-card:hover::after {
+  opacity: 1;
+}
+
+/* Dashboard Headings */
+.display-4 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+/* Dashboard Icon Section */
+.dashboard-icons,
+.dashboard-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Card Link Design */
+.dash-btn,
+.dashboard-icon {
+  display: block;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-icon:hover,
+.dash-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  background: #f8f9fa;
+}
+
+/* Dashboard Icons */
+.icon-style {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+
+.dashboard-icon:hover .icon-style {
+  color: #6610f2;
+}
+
+/* Emoji Compatibility */
+.icon {
+  font-size: 3.5rem;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", "EmojiOne Color", sans-serif;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Hover Card Utility (for emoji links) */
+.hover-shadow {
+  display: block;
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer,
+.dashboard-footer {
+  background: transparent;
+  padding: 1rem 0;
+  text-align: center;
+}

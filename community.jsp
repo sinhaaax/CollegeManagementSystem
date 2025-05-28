@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/community.css" />
+        <link rel="stylesheet" href="css/header.css" />
+    
   </head>
 
   <body>
@@ -40,7 +42,7 @@
             <div class="card post-card mb-3 shadow">
               <div class="card-body d-flex">
                 <img src="images/pf1.jpg" class="rounded-circle me-3" alt="Sraddha">
-                <div class="w-100">
+                <div class='w-100'>
                   <p class="mb-1"><strong>Sraddha Kapoor</strong></p>
                   <p>Does anyone have the PDF of last year's DBMS paper?</p>
                   <div class="d-flex justify-content-between small">
@@ -60,7 +62,7 @@
             <div class="card post-card mb-3 shadow">
               <div class="card-body d-flex">
                 <img src="images/pf2.jpg" class="rounded-circle me-3" alt="Tamanna">
-                <div class="w-100">
+                <div class='w-100'>
                   <p class="mb-1"><strong>Tamanna Bhatia</strong></p>
                   <p>Cultural fest rehearsals at 5PM! Don’t miss it.</p>
                   <div class="d-flex justify-content-between small">
@@ -80,10 +82,10 @@
             <div class="card post-card mb-3 shadow">
               <div class="card-body d-flex">
                 <img src="images/pf3.jpg" class="rounded-circle me-3" alt="Niha">
-                <div class="w-100">
+                <div class='w-100'>
                   <p class="mb-1"><strong>Niha Su Xen</strong></p>
                   <p>Any updates on result rechecking forms?</p>
-                  <div class="d-flex justify-content-between align-items-center small w-100"">
+                  <div class="d-flex justify-content-between small">
                     <span class="text-white">🕒 Posted 1 day ago</span>
                     <div class="text-white">
                       <button class="btn btn-sm btn-outline-danger me-2 glow-icon">❤️

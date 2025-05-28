@@ -1,0 +1,90 @@
+/* Sign Out Button */
+.signOut-button {
+  background-color: #c7e1bb;
+  color: #000;
+  font-size: 14px;
+  padding: 6px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.signOut-button:hover {
+  background-color: #00b383;
+  color: white;
+}
+
+/* Toggler Button */
+.navbar-toggler {
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #009970;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+  visibility: visible;
+}
+
+/* Logo Container Styling */
+.logo-container {
+  background: linear-gradient(to right, #ffffff, #ffffffcc);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.offcanvas .logo-container {
+  display: inline-block;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+/* JU Logo Image */
+.ju-logo {
+  height: 50px;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.offcanvas .ju-logo {
+  background-color: transparent !important;
+  padding: 0;
+  box-shadow: none;
+}

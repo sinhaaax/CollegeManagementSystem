@@ -1,0 +1,55 @@
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.page-wrapper {
+  padding-top: 100px;
+  /* pushes card below navbar */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
+
+.glass-card {
+  background-color: #0e181a;
+  color: #fff;
+  box-shadow: 0 0 25px #0e181a, 0 0 40px rgba(0, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 750px;
+}
+
+.glow-icon:hover {
+  text-shadow: 0 0 5px #7b7878, 0 0 10px #00ffff;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+textarea.form-control {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+textarea::placeholder {
+  color: #ccc;
+}
+
+.card.post-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #00ffff;
+  color: #fff;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.post-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}

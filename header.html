@@ -6,29 +6,32 @@
         </div>
 
         <!-- Centered Nav Links (Visible on large screens) -->
-        <ul class="navbar-nav flex-row mx-auto d-none d-lg-flex">
-            <li class="nav-item px-2">
-                <a class="nav-link text-white" href="content.jsp">Dashboard</a>
-            </li>
-            <li class="nav-item px-2">
-                <a class="nav-link text-white" href="NoticeBoard.jsp">Notice</a>
-            </li>
-            <li class="nav-item px-2">
-                <a class="nav-link text-white" href="results.html">Results</a>
-            </li>
-            <li class="nav-item px-2">
-                <a class="nav-link text-white" href="community.jsp">Community</a>
-            </li>
-            <li class="nav-item px-2">
-                <a class="nav-link text-white" href="contact.html">Contacts</a>
-            </li>
-        </ul>
+        <div class="d-none d-lg-flex position-absolute top-50 start-50 translate-middle">
+  <ul class="navbar-nav flex-row">
+    <li class="nav-item px-2">
+      <a class="nav-link text-white" href="content.jsp">Dashboard</a>
+    </li>
+    <li class="nav-item px-2">
+      <a class="nav-link text-white" href="NoticeBoard.jsp">Notice</a>
+    </li>
+    <li class="nav-item px-2">
+      <a class="nav-link text-white" href="results.html">Results</a>
+    </li>
+    <li class="nav-item px-2">
+      <a class="nav-link text-white" href="community.jsp">Community</a>
+    </li>
+    <li class="nav-item px-2">
+      <a class="nav-link text-white" href="contact.html">Contacts</a>
+    </li>
+  </ul>
+</div>
+
 
         <!-- Sign Out Button for Large Screens -->
         <a href="login.html" class="btn signOut-button d-none d-lg-inline-block">Sign Out</a>
 
         <!-- Toggler for Mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
