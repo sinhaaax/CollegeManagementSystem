@@ -8,16 +8,6 @@ body {
   flex-direction: column;
 }
 
-/* Dashboard Container */
-.dashboard-container {
-  min-height: calc(100vh - 56px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  background: #f0f2f5;
-}
-
 main {
   flex: 1;
   padding-top: 70px;
@@ -70,7 +60,6 @@ main {
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-
 .profile-card h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -100,7 +89,8 @@ main {
 .display-4 {
   font-size: 2.5rem;
   text-align: center;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji",
+    sans-serif;
 }
 
 /* Dashboard Icon Section */
@@ -150,7 +140,8 @@ main {
 /* Emoji Compatibility */
 .icon {
   font-size: 3.5rem;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", "EmojiOne Color", sans-serif;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji",
+    "Twemoji Mozilla", "EmojiOne Color", sans-serif;
   user-select: none;
   line-height: 1;
 }
