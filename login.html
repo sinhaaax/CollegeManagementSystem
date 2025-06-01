@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,24 +13,20 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/login.css" />
 </head>
-
 <body>
 
-  <div class="d-flex justify-content-center align-items-center vh-100 bg-cover"
-    style="background-image: url('images/aurobindo.jpg')">
+  <div class="d-flex justify-content-center align-items-center vh-100 bg-cover" style="background-image: url('images/aurobindo.jpg')">
     <div class="wrapper text-white">
       <form action="content.jsp" id="loginForm">
         <h1 class="text-center mb-4">Login</h1>
 
         <div class="mb-3 position-relative input-box">
-          <input type="text" id="username" name="username" class="form-control"
-            placeholder="Current 12 digit roll number" id="username" required>
+          <input type="text" id="username" name="username" class="form-control" placeholder="Current 12 digit roll number" id="username" required>
           <i class='bx bxs-user'></i>
         </div>
 
         <div class="mb-3 position-relative input-box">
-          <input type="password" id="password" name="password" class="form-control" placeholder="Password" id="password"
-            required>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password" id="password" required>
           <i class='bx bxs-lock-alt'></i>
         </div>
 
@@ -53,7 +48,7 @@
       const password = document.getElementById("password").value;
 
       if ((username === "user" && password === "100") ||
-        (username === "admin" && password === "admin")) {
+          (username === "admin" && password === "admin")) {
         // Allow form submission
       } else {
         e.preventDefault(); // Stop form submission
@@ -62,5 +57,4 @@
     });
   </script>
 </body>
-
 </html>

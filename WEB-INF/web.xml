@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+
+    <!-- Subject Management Servlet -->
+    <servlet>
+        <servlet-name>SubjectServlet</servlet-name>
+        <servlet-class>SubjectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubjectServlet</servlet-name>
+        <url-pattern>/subjects</url-pattern>
+    </servlet-mapping>
+
+    <!-- PDF Download Servlet -->
+    <servlet>
+        <servlet-name>DownloadPdfServlet</servlet-name>
+        <servlet-class>DownloadPdfServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadPdfServlet</servlet-name>
+        <url-pattern>/downloadPdf</url-pattern>
+    </servlet-mapping>
+
+    <!-- PDF Listing Servlet -->
+    <servlet>
+        <servlet-name>PdfsServlet</servlet-name>
+        <servlet-class>PdfsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PdfsServlet</servlet-name>
+        <url-pattern>/pdfs</url-pattern>
+    </servlet-mapping>
+
+    <!-- File Upload Servlet -->
+    <servlet>
+        <servlet-name>upload</servlet-name>
+        <servlet-class>uploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>upload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+    <!-- Like Button AJAX Handler -->
+    <servlet>
+        <servlet-name>likeServlet</servlet-name>
+        <servlet-class>LikeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>likeServlet</servlet-name>
+        <url-pattern>/like</url-pattern>
+    </servlet-mapping>
+
+    <!-- Comment Submission Servlet -->
+    <servlet>
+        <servlet-name>commentServlet</servlet-name>
+        <servlet-class>CommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>commentServlet</servlet-name>
+        <url-pattern>/comment</url-pattern>
+    </servlet-mapping>
+
+</web-app>
